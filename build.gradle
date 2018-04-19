@@ -3,14 +3,15 @@ apply plugin: 'ivy-publish'
 
 sourceCompatibility = 1.6
 version = '0.2.0'
-group = 'stellar'
+group = 'BlockchainOS'
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'stellar-sdk',
+        attributes 'Implementation-Title': 'bostokennet-sdk',
                    'Implementation-Version': version
     }
-    archiveName 'stellar-sdk.jar'
+
+    archiveName 'bostokennet-sdk.jar'
     duplicatesStrategy DuplicatesStrategy.EXCLUDE
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
